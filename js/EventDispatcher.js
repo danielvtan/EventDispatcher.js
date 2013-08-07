@@ -37,7 +37,7 @@ function EventDispatcher() {
 	}
 	this.addLiveListener = function(id, func) {
         var eventInterval;
-        var live = {id:id, func:func eventInterval:eventInterval };
+        var live = {id:id, func:func, eventInterval:eventInterval };
 		thisClass.liveListener.push(live);
 		if(thisClass.liveListener.length > 0)
 			eventInterval = setInterval(function(){ checkLive() }, 50);
